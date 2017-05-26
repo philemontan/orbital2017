@@ -1,10 +1,10 @@
-import { SocbridgePage } from './app.po';
+import { Mockup1Page } from './app.po';
 
-describe('socbridge App', () => {
-  let page: SocbridgePage;
+describe('mockup1 App', () => {
+  let page: Mockup1Page;
 
   beforeEach(() => {
-    page = new SocbridgePage();
+    page = new Mockup1Page();
   });
 
   it('should display message saying app works', () => {

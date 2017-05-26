@@ -1,0 +1,59 @@
+<div class="jumbotron" style="text-align: center">
+  <h1 class="display-3">NUS Connect</h1>
+  <p class="lead">This is a platform for NUS Students to Connect and discuss!</p>
+  <hr class="my-2">
+  <p>Please Login to Continue</p>
+  <div class=" row lead">
+  <div class="col-lg-4 col-lg-offset-4 text-center">
+    <button class="btn btn-success btn-block" (click) = login()>Login</button>
+    <button class="btn btn-primary btn-block" (click)= signUp()>Sign Up</button>
+  </div>
+  </div>
+</div>
+<body>
+
+<div class="container" *ngIf="loggedIn">
+  <h2>Available Users</h2>
+  <div class="list-group">
+    <a href="#" *ngFor="let x of Users; let i = index" class="list-group-item"
+       style="text-align: center" [routerLink]="['/loggedIn',i,x.firstName,x.lastName]"> {{x.firstName}} {{x.lastName}} </a>
+  </div>
+</div>
+</body>
+
+<div class="container" *ngIf="signUpNow">
+  <h2>Sign Up</h2>
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="firstName">FirstName:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="firstName" placeholder="Enter First Name">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="LastName">LastName:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="LastName" placeholder="Enter Last Name">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="Faculty">Faculty:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="Faculty" placeholder="Enter Faculty">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="Year">Year:</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" id="Year" placeholder="Enter Year">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+

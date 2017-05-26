@@ -1,0 +1,17 @@
+.centerBig {
+  text-align: center;
+  font-size: large;
+  background: #EF7C00;
+  color: black;
+}
+.centerBig:hover {
+  text-align: center;
+  font-size: large;
+  background: #EF7C00;
+  color: black;
+}
+.courseMid {
+  text-align: center;
+  font-size: medium;
+
+}

@@ -1,0 +1,11 @@
+<body>
+<div class="jumbotron">
+  <h1 class="display-3" style="text-align: center">Welcome {{user.firstName}} {{user.lastName}}</h1>
+</div>
+<div class="list-group">
+  <a  class="list-group-item centerBig" >
+    Courses
+  </a>
+  <a href="#" *ngFor="let crs of courses" class="list-group-item courseMid">{{crs.courseName}}</a>
+</div>
+</body>
