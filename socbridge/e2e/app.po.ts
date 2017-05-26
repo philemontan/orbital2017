@@ -1,6 +1,6 @@
 import { browser, by, element } from 'protractor';
 
-export class SocbridgePage {
+export class Mockup1Page {
   navigateTo() {
     return browser.get('/');
   }
